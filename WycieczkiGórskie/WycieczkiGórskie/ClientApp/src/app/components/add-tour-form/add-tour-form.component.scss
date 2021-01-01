@@ -1,0 +1,28 @@
+mat-card {
+  max-width: 400px;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+.content {
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+.preview {
+  padding: 10px;
+}
+.tlo {
+  width: 50%;
+}
+mat-form-field {
+  width: 80%;
+  margin: auto;
+}
+form {
+  background-color: white;
+}
+button {
+  width: 100%;
+}

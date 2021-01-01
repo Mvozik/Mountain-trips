@@ -1,0 +1,63 @@
+<div class="content">
+  <div class="preview">
+  </div>
+  
+    <div class="tlo">
+      <form [formGroup]="tourForm" (ngSubmit)="submit()">
+        <h2>Dodaj Wycieczkę</h2>
+        <mat-form-field class="full-width-input">
+          <input matInput type="text" placeholder="nazwa" formControlName="name" required />
+          <mat-error> Please provide a valid name </mat-error>
+        </mat-form-field>
+
+        <mat-form-field  class="full-width-input">
+          <mat-label>Wprowadź datę wycieczki</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate formControlName="startDate" placeholder="Data rozpoczęcia">
+            <input matEndDate formControlName="endDate" placeholder="Data zakończenia">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+          <mat-error *ngIf="tourForm.controls.startDate.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+          <mat-error *ngIf="tourForm.controls.endDate.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="full-width-input">
+          <input matInput type="text" placeholder="dystans" formControlName="distance" required />
+          <mat-error> Please provide a valid price </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width-input">
+          <input matInput type="text" placeholder="miejsce rozpoczęcia" formControlName="startPlace" required />
+          <mat-error> Please provide a valid price </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width-input">
+          <input matInput type="text" placeholder="miejsce zakończenia" formControlName="endPlace" required />
+          <mat-error> Please provide a valid price </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field>
+          <ngx-mat-file-input [multiple]="true" [placeholder]="'wybierz zdjęcia'" formControlName="tourPhoto">
+          </ngx-mat-file-input>
+        </mat-form-field>
+
+        <mat-form-field>
+          <ngx-mat-file-input [placeholder]="'wybierz film'" formControlName="tourVideo">
+          </ngx-mat-file-input>
+        </mat-form-field>
+
+        <button *ngIf="!tourForm.valid" disabled mat-raised-button color="primary">
+          Dodaj
+        </button>
+        <button *ngIf="tourForm.valid" mat-raised-button color="primary">
+          Dodaj
+        </button>
+
+
+
+      </form>
+    </div>
+  
+</div>

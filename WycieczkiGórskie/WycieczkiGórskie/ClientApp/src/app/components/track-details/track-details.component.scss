@@ -1,0 +1,50 @@
+.whole {
+  color: white;
+  margin-top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1050px 200px;
+}
+.center {
+  margin: auto;
+  padding-top: 40px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  div {
+    margin: 10px;
+  }
+}
+.name {
+  font-size: 35px;
+}
+.startdate {
+  font-size: 22px;
+}
+.photo {
+  width: 300px;
+  margin: 15px;
+  border-radius: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.startplace {
+  font-size: 16px;
+}
+.option {
+  height: 100px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  margin: 20px;
+}
+.option:hover {
+  height: 100px;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}

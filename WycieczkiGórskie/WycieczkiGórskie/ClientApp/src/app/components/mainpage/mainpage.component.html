@@ -1,0 +1,19 @@
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="text-center position">
+
+    <p class="header">Wędrówki górskie</p>
+    <input type="email" id="defaultLoginFormEmail" formControlName="email" class="form-control mb-4" placeholder="E-mail">
+  
+    <input type="password" id="defaultLoginFormPassword" formControlName="password" class="form-control mb-4" placeholder="Password">
+  
+    <div class="d-flex justify-content-around">
+     
+      
+    </div>
+  
+    <button mat-button class="sign-in">Zaloguj</button>
+  
+    <p>Nie masz konta?
+      <a routerLink="register"><b>Zarejestruj się</b></a>
+    </p>
+  </form>

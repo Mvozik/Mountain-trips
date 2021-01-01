@@ -1,0 +1,27 @@
+<div class="full">
+<div class="side-nav">
+    <button mat-button routerLink="/" class="logout">Wyloguj</button>
+    <button mat-button routerLink="add" class="add-track">Dodaj wycieczkę</button>
+    <h1>Moje Wycieczki</h1>
+    <app-filter (searchTerm)="applyFilter($event)"></app-filter>
+    
+    <mat-form-field  [formGroup]="tourForm" class="full-width-input">
+        
+        <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate formControlName="startDate" placeholder="Data od">
+            <input matEndDate formControlName="endDate" placeholder="Data do">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      
+    </mat-form-field>
+    <div class="datefiltercontainer">
+    <button mat-button class="datefilter" (click)="filterDate()">Filtruj po dacie</button>
+    </div>
+    <button mat-button [routerLink]="['details',track.id]" *ngFor='let track of filteredTracks'>{{track.name}}</button>
+    
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
+</div>

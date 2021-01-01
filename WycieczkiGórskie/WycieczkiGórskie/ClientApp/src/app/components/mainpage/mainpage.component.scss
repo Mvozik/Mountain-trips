@@ -1,0 +1,51 @@
+.position {
+  width: 30%;
+  margin: auto;
+  padding-top: 10%;
+  color: white;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../assets/background.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header {
+  padding-bottom: 30px;
+  color: #161616;
+  font-size: 45px;
+  font-style: italic;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.sign-in {
+  margin: 20px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+.sign-in:hover {
+  background-color: white;
+  color: #161616;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  text-align: center;
+}

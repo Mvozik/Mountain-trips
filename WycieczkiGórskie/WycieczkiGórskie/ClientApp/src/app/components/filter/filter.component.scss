@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  width: 263px;
+  height: 38px;
+  border: 2px solid #d4d7e1;
+  background-color: #f2f3f6;
+  border-radius: 35px;
+
+  input {
+    display: block;
+    border: none;
+    margin: auto auto;
+    background-color: #f2f3f6;
+    outline: none;
+    color: #494e61;
+    font-family: "Open Sans", sans-serif;
+  }
+  input::placeholder {
+    color: #a9aec1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+  }
+}
+
+.icon {
+  font-size: 16px;
+  margin: auto 0 auto 14px;
+  color: #a9aec1;
+}
