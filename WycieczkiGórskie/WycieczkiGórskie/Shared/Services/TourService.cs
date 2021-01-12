@@ -70,8 +70,10 @@ namespace WycieczkiGórskie.Shared.Services
 
         public async Task<Tour> PostTour(PostTourDto postTourDto)
         {
-            var startDate = postTourDto.StartDate.Split("T"); ;
-            var endDate = postTourDto.EndDate.Split("T"); ;
+            var startDate = postTourDto.StartDate.Split("T"); 
+            var endDate = postTourDto.EndDate.Split("T"); 
+
+
 
             var user = await _userService.GetCurrentUserAsync();
             var tour = new Tour

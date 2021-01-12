@@ -1,24 +1,28 @@
 <div class="whole" *ngIf="track">
-    <div class="center">
-        <div class="name">{{track.name}}</div>
-        <div class="startdate">Twoja wycieczka rozpoczęła się {{track.startDate}}</div>
-        <div class="startplace">Wyruszyłeś z {{track.startPlace}}</div>
-        <div class="startplace">Udało Ci się przejść {{track.distance}} km!</div>
-        <div class="startplace">Zakończyłeś w {{track.endPlace}}</div>
-        
-
-        <video *ngIf="displayVideo" width="320" height="240" controls>
-            <source id="video" [src]="video" type="video/mp4">
-        </video>
-        <div #myDiv>
-        </div>
-
-        <div class="grid">
-            <img *ngFor='let photo of track.tourPhotos' class="photo" src={{photo.photo}}>
-        </div>
+  <div class="center">
+    <div class="name">{{ track.name }}</div>
+    <div class="startdate">
+      Twoja wycieczka rozpoczęła się {{ track.startDate }}
     </div>
-    <div class="flex">
+    <div class="startplace">Wyruszyłeś z {{ track.startPlace }}</div>
+    <div class="startplace">Udało Ci się przejść {{ track.distance }} km!</div>
+    <div class="startplace">Zakończyłeś w {{ track.endPlace }}</div>
+
+    <video *ngIf="displayVideo" width="320" height="240" controls>
+      <source id="video" [src]="video" type="video/mp4" />
+    </video>
+    <div #myDiv></div>
+
+    <div class="grid">
+      <img
+        *ngFor="let photo of track.tourPhotos"
+        class="photo"
+        [src]="'data:image/jpeg;base64,' + photo.photo"
+      />
+    </div>
+  </div>
+  <div class="flex">
     <button mat-button class="option" (click)="usun()">usuń</button>
-    <button mat-button class="option" >dodaj zdjęcie</button>
-    </div>
+    <button mat-button class="option">dodaj zdjęcie</button>
+  </div>
 </div>
